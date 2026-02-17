@@ -1,9 +1,10 @@
 #-------------------------------------------------------------
 # AUTHOR: Devaansh Mann
 # FILENAME: search_engine.py
-# SPECIFICATION:
+# SPECIFICATION:Binary term-weight search engine using unigrams + bigrams,
+#               Porter stemming, stop word removal, and dot-product scoring.
 # FOR: CS 5180- Assignment #1
-# TIME SPENT: TBD
+# TIME SPENT: ~ 1.5 - 2 hours
 #-----------------------------------------------------------*/
 
 # ---------------------------------------------------------
@@ -53,11 +54,11 @@ def stemming_tokenizer(text):
     return cleaned
 
 vectorizer = CountVectorizer(
-    analyzer='word',
-    tokenizer=stemming_tokenizer,
-    stop_words=None,
-    ngram_range=(1, 2),
-    binary=True
+    analyzer = 'word',
+    tokenizer = stemming_tokenizer,
+    stop_words = None,
+    ngram_range = (1, 2),
+    binary = True
 )
 
 # ---------------------------------------------------------
